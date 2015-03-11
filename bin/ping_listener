@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require 'i3/rb_status'
+require 'json'
+bus = DBus.session_bus
+service = bus.service(I3::RbStatus::SERVICE)
+obj = service.object(I3::RbStatus::OBJECT)
+obj.introspect
+obj.default_iface = I3::RbStatus::INTERFACE
+obj.hello("One Fish", {fish: 1}.to_json)
+obj.hello("Two Fish", {fish: 2}.to_json)
+obj.hello("Red Fish", {fish: :red}.to_json)
+obj.hello("Blue Fish", {fish: :blue}.to_json)
+

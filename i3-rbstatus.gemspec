@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'i3/rbstatus/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "i3-rbstatus"
-  spec.version       = I3::Rbstatus::VERSION
+  spec.version       = File.read('VERSION')
   spec.authors       = ["scott m parrish"]
   spec.email         = ["anithri@gmail.com"]
   spec.summary       = %q{an i3-bar status daemon}
@@ -18,6 +17,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "virtus"
+  spec.add_dependency "ruby-dbus"
   spec.add_development_dependency "version"
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"

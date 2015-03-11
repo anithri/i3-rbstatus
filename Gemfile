@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gemspec
 
 group :development do
+  gem 'thor'
+  gem 'facets'
   gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'fuubar'
