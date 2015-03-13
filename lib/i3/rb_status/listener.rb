@@ -1,4 +1,4 @@
-require 'dbus'
+
 module I3
   module RbStatus
     class Listener < DBus::Object

@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "virtus"
+  spec.add_dependency "clockwork"
   spec.add_dependency "ruby-dbus"
   spec.add_development_dependency "version"
   spec.add_development_dependency "bundler", "~> 1.7"

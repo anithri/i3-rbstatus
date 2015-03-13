@@ -1,0 +1,7 @@
+require 'i3/block'
+require 'clockwork'
+
+
+i = I3::Block.new do |config|
+  config.block
+end

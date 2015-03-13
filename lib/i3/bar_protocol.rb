@@ -19,8 +19,8 @@ module I3
     def to_json
       final = {}
       attributes.each_pair do |k,v|
-        next unless v
-        final[k] = v.nil?
+        next if v.nil?
+        final[k] = v
       end
       final.to_json
     end
